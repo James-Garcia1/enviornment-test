@@ -10,10 +10,28 @@ RSpec.describe Book, type: :model do
     expect(subject).to be_valid
   end
 
+  #title
   it 'is not valid without a name' do
     subject.title = nil
     expect(subject).not_to be_valid
   end
-end
+  
+  #author
+  it 'is not valid without a author' do
+    subject.author = nil
+    expect(subject).not_to be_valid
+  end
 
+  #price
+  it 'is not valid without a price' do
+    subject.price = nil
+    expect(subject).not_to be_valid
+  end
+
+  #date
+  it 'is not valid without a date' do
+    subject.published = nil
+    expect(subject).not_to be_valid
+  end
+end
 
