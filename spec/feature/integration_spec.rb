@@ -21,7 +21,6 @@ RSpec.describe 'Creating a book: ', type: :feature do
     fill_in 'Author', with: 'J.K. Rowling'
     fill_in 'Price', with: '20.00'
     fill_in "Published", with: '1999-01-31'
-    click_on 'Create Book'
     visit books_path
     expect(page).not_to have_content('harry potter')
   end
